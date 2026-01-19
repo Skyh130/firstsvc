@@ -28,38 +28,6 @@ const resultId = document.getElementById("resultId");
 const resultPw = document.getElementById("resultPw");
 const resetBtn = document.getElementById("resetBtn");
 
-// ③ 🌸 꽃잎 함수 
-function createPetals() {
-  const container = document.getElementById("petalContainer");
-
-  // 🌸 랜덤 색상 후보
-  const colors = [
-    "#ffb6d9", // 연핑크
-    "#ffd1e6", // 연한 벚꽃색
-    "#fff0f7", // 거의 흰색
-    "#ff9acb"  // 진핑크
-  ];
-
-  for (let i = 0; i < 20; i++) {
-    const petal = document.createElement("div");
-    petal.className = "petal";
-
-    // ⭐ 랜덤 색상 적용
-    petal.style.backgroundColor =
-      colors[Math.floor(Math.random() * colors.length)];
-
-    petal.style.left = Math.random() * 100 + "vw";
-    petal.style.animationDuration = 2 + Math.random() * 2 + "s";
-    petal.style.animationDelay = Math.random() * 0.5 + "s";
-
-    container.appendChild(petal);
-
-    setTimeout(() => {
-      petal.remove();
-    }, 4000);
-  }
-}
-
 // 검색 처리
 form.addEventListener("submit", function (event) {
   event.preventDefault(); // 새로고침 방지
