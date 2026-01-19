@@ -55,7 +55,10 @@ function createPetals() {
     container.appendChild(petal);
 
     setTimeout(() => {
-      petal.remove
+      petal.remove();
+    }, 4000);
+  }
+}
 
 
 
