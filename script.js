@@ -60,8 +60,6 @@ function createPetals() {
   }
 }
 
-
-
 // 검색 처리
 form.addEventListener("submit", function (event) {
   event.preventDefault(); // 새로고침 방지
