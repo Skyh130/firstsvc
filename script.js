@@ -48,3 +48,18 @@ form.addEventListener("submit", function (event) {
     resultPw.textContent = "검색 결과 없음";
   }
 });
+
+const resetBtn = document.getElementById("resetBtn");
+
+resetBtn.addEventListener("click", function () {
+  // 입력값 초기화
+  inputId.value = "";
+  inputName.value = "";
+
+  // 결과 초기화
+  resultId.textContent = "-";
+  resultPw.textContent = "-";
+
+  // 포커스 이동
+  inputId.focus();
+});
