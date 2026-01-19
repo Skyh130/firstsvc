@@ -1,0 +1,103 @@
+/* 전체 기본 설정 */
+* {
+  box-sizing: border-box;
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+}
+
+body {
+  background-color: #fff6fb;
+  margin: 0;
+  padding: 0;
+}
+
+/* 제목 */
+h1 {
+  text-align: center;
+  color: #ff6fae;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+/* 메인 카드 */
+form {
+  background-color: #ffffff;
+  width: 320px;
+  margin: 0 auto;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(255, 111, 174, 0.2);
+}
+
+/* 입력 영역 */
+form div {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+/* 입력창 */
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 2px solid #ffd1e6;
+  font-size: 14px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #ff6fae;
+  background-color: #fff0f7;
+}
+
+/* 검색 버튼 */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 14px;
+  background-color: #ff6fae;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: #ff4f9a;
+  transform: translateY(-2px);
+}
+
+/* 결과 영역 */
+#resultArea {
+  width: 320px;
+  margin: 25px auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(255, 111, 174, 0.15);
+}
+
+#resultArea h2 {
+  text-align: center;
+  color: #ff6fae;
+  margin-bottom: 15px;
+}
+
+/* 결과 텍스트 */
+#resultArea p {
+  font-size: 14px;
+  margin: 10px 0;
+  color: #333;
+}
+
+#resultArea span {
+  color: #ff4f9a;
+  font-weight: bold;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>구글 계정 검색</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS는 다음 단계에서 분리하거나 추가 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1>구글 계정 검색</h1>
+
+  <!-- 검색 영역 -->
+  <form id="searchForm">
+    <div>
+      <label for="studentId">학번</label><br>
+      <input
+        type="text"
+        id="studentId"
+        name="studentId"
+        placeholder="학번을 입력하세요"
+        required
+      >
+    </div>
+
+    <br>
+
+    <div>
+      <label for="studentName">이름</label><br>
+      <input
+        type="text"
+        id="studentName"
+        name="studentName"
+        placeholder="이름을 입력하세요"
+        required
+      >
+    </div>
+
+    <br>
+
+    <button type="submit">검색</button>
+  </form>
+
+  <hr>
+
+  <!-- 결과 출력 영역 -->
+  <section id="resultArea">
+    <h2>검색 결과</h2>
+
+    <p>
+      <strong>구글 계정 ID:</strong>
+      <span id="resultId">-</span>
+    </p>
+
+    <p>
+      <strong>비밀번호:</strong>
+      <span id="resultPw">-</span>
+    </p>
+  </section>
+
+  <!-- JS는 다음 단계에서 연결 -->
+  <script src="script.js"></script>
+
+</body>
+</html>
