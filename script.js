@@ -26,7 +26,6 @@ const inputId = document.getElementById("studentId");
 const inputName = document.getElementById("studentName");
 const resultId = document.getElementById("resultId");
 const resultPw = document.getElementById("resultPw");
-const resetBtn = document.getElementById("resetBtn");
 
 // 검색 처리
 form.addEventListener("submit", function (event) {
@@ -44,24 +43,8 @@ form.addEventListener("submit", function (event) {
   if (result) {
     resultId.textContent = result.googleId;
     resultPw.textContent = result.googlePw;
-    createPetals(); // 🌸 검색 성공 시 꽃잎 효과
   } else {
     resultId.textContent = "검색 결과 없음";
     resultPw.textContent = "검색 결과 없음";
   }
-});
-
-const resetBtn = document.getElementById("resetBtn");
-
-resetBtn.addEventListener("click", function () {
-  // 입력값 초기화
-  inputId.value = "";
-  inputName.value = "";
-
-  // 결과 초기화
-  resultId.textContent = "-";
-  resultPw.textContent = "-";
-
-  // 포커스 이동
-  inputId.focus();
 });
