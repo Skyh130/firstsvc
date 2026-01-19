@@ -26,6 +26,28 @@ const inputId = document.getElementById("studentId");
 const inputName = document.getElementById("studentName");
 const resultId = document.getElementById("resultId");
 const resultPw = document.getElementById("resultPw");
+const resetBtn = document.getElementById("resetBtn");
+
+// ③ 🌸 꽃잎 함수 
+function createPetals() {
+  const container = document.getElementById("petalContainer");
+
+  for (let i = 0; i < 20; i++) {
+    const petal = document.createElement("div");
+    petal.className = "petal";
+
+    petal.style.left = Math.random() * 100 + "vw";
+    petal.style.animationDuration = 2 + Math.random() * 2 + "s";
+    petal.style.animationDelay = Math.random() * 0.5 + "s";
+
+    container.appendChild(petal);
+
+    setTimeout(() => {
+      petal.remove();
+    }, 4000);
+  }
+}
+
 
 // 검색 처리
 form.addEventListener("submit", function (event) {
@@ -43,6 +65,7 @@ form.addEventListener("submit", function (event) {
   if (result) {
     resultId.textContent = result.googleId;
     resultPw.textContent = result.googlePw;
+    createPetals(); // 🌸 검색 성공 시 꽃잎 효과
   } else {
     resultId.textContent = "검색 결과 없음";
     resultPw.textContent = "검색 결과 없음";

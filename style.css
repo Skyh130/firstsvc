@@ -119,3 +119,36 @@ button:hover {
 #resetBtn:hover {
   background-color: #ffb6d9;
 }
+
+/* 꽃잎 컨테이너 */
+#petalContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+/* 꽃잎 하나 */
+.petal {
+  position: absolute;
+  top: -20px;
+  width: 14px;
+  height: 14px;
+  background-color: #ffb6d9;
+  border-radius: 50% 50% 50% 0;
+  opacity: 0.8;
+  transform: rotate(45deg);
+  animation: fall linear forwards;
+}
+
+/* 떨어지는 애니메이션 */
+@keyframes fall {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
